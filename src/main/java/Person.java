@@ -1,4 +1,3 @@
-
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.List;
@@ -82,7 +81,7 @@ public class Person implements CheckPerson {
     }
     public void printPerson() {
     }
-    
+
     public static void printPersons(
             List<Person> roster, CheckPerson tester) {
         for (Person p : roster) {
