@@ -61,7 +61,6 @@ public class Person implements CheckPerson {
 
     public int getAge() {
         return Period.between(birthday, LocalDate.now()).getYears();
-
     }
 
     @Override
@@ -80,16 +79,26 @@ public class Person implements CheckPerson {
 
     }
     public void printPerson() {
+        System.out.println(this.toString());
     }
 
-    public static void printPersons(
-            List<Person> roster, CheckPerson tester) {
+    public static void printPersonsOlderThan(List<Person> roster, int age) {
         for (Person p : roster) {
-            if (tester.test(p)) {
+            if (p.getAge() >= age) {
                 p.printPerson();
             }
         }
     }
+
+    public static void printPersonsWithinAgeRange(
+            List<Person> roster, int low, int high) {
+        for (Person p : roster) {
+            if (low <= p.getAge() && p.getAge() < high) {
+                p.printPerson();
+            }
+        }
+    }
+
 }
 
 
