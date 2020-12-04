@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -13,6 +14,7 @@ public class PersonTest {
     private Person p2;
     private Person p3;
     List<Person> pList;
+    LinkedList<String> ll = new LinkedList<>();
 
     @Before
     public void setup() {

@@ -1,12 +1,8 @@
+import java.util.ArrayList;
 import java.util.List;
 
-public class Search implements CheckPerson{
-    @Override
-    public boolean test(Person p) {
-        return p.gender == Person.Sex.FEMALE &&
-                p.getAge() >= 0 &&
-                p.getAge() <= 80;
-    }
+public class Search {
+    List<Person> roster = new ArrayList<>();
 
     public static void printPersons(List<Person> roster, CheckPerson tester) {
         for (Person p : roster) {
@@ -16,3 +12,4 @@ public class Search implements CheckPerson{
         }
     }
 }
+
