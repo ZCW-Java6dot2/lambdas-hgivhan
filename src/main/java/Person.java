@@ -16,12 +16,12 @@ public class Person implements CheckPerson {
         this.emailAddress = emailAddress;
     }
 
-    public Person() {
-        this.name = "";
-        this.birthday = LocalDate.now();
-        this.gender = null;
-        this.emailAddress = "";
-    }
+//    public Person() {
+//        this.name = "";
+//        this.birthday = LocalDate.now();
+//        this.gender = null;
+//        this.emailAddress = "";
+//    }
 
     public enum Sex {
         MALE, FEMALE

@@ -34,14 +34,8 @@ public class PersonTest {
     }
 
     @Test
-    public void nullaryConstructorTest() {
-        Person person = new Person();
-        Assert.assertNotNull(person);
-    }
-
-    @Test
     public void getNameTest() {
-        Person person = new Person();
+        Person person = new Person("Janet", LocalDate.of(1999, 12, 1), Person.Sex.MALE, "bob@bob.com");
         String expected = "Janet";
         person.setName(expected);
         String actual = person.getName();
@@ -51,7 +45,7 @@ public class PersonTest {
 
     @Test
     public void getEmailTest() {
-        Person person = new Person();
+        Person person = new Person("Bob", LocalDate.of(1999, 12, 1), Person.Sex.MALE, "janet@aol.com");
         String expected = "janet@aol.com";
         person.setEmailAddress(expected);
         String actual = person.getEmailAddress();
@@ -99,7 +93,7 @@ public class PersonTest {
     @Test
     public void printPersonTest() {
         //given
-        Person kyle = new Person();
+        Person kyle = new Person("Kyle", LocalDate.of(1999, 12, 1), Person.Sex.MALE, "kyle@bob.com");
         //when
         kyle.printPerson();
         //then
@@ -116,12 +110,12 @@ public class PersonTest {
         Person.printPersonsWithinAgeRange(pList, 30, 50);
     }
 
-    @Test
-    public void searchTest() {
-        SocialNetworks networks = new SocialNetworks();
-        Search search = new Search();
-        Search.printPersons(networks.get(), search);
+//    @Test
+//    public void searchTest() {
+//        SocialNetworks networks = new SocialNetworks();
+//        Search search = new Search();
+//        Search.printPersons(networks.get(), search);
     }
-}
+
 
 
